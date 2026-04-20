@@ -1,0 +1,4 @@
+/* Outer host element — kept minimal since styles live inside the shadow DOM */
+#supabase-panel {
+  all: initial;
+}

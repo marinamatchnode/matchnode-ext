@@ -1,0 +1,31 @@
+{
+  "manifest_version": 3,
+  "name": "Matchnode Client Details",
+  "version": "1.0",
+  "update_url": "https://marinamatchnode.github.io/matchnode-ext/update.xml",
+  "description": "Surface client info inside Google Chat — view team, retainer, tools and links, and edit client details without leaving the chat.",
+  "permissions": ["storage", "activeTab"],
+  "host_permissions": [
+    "https://chat.google.com/*",
+    "https://*.supabase.co/*"
+  ],
+  "action": {
+    "default_title": "Toggle Supabase Panel"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["MN Full Color_Mark.png", "MN%20Full%20Color_Mark.png"],
+      "matches": ["https://chat.google.com/*"]
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://chat.google.com/*"],
+      "js": ["supabase.js", "content.js"],
+      "css": ["panel.css"]
+    }
+  ]
+}

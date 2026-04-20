@@ -346,7 +346,7 @@
   <div id="edit-panel"></div>
   `;
 
-  shadow.getElementById('fab-img').src = chrome.runtime.getURL('MN%20Full%20Color_Mark.png');
+  shadow.getElementById('fab-img').src = chrome.runtime.getURL('Icon.png');
 
   const fab       = shadow.getElementById('fab');
   const panel     = shadow.getElementById('panel');
